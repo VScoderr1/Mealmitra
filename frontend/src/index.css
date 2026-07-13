@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Work Sans", system-ui, -apple-system, sans-serif;
+  background-color: #fbf3e6;
+  color: #2a2420;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Fraunces", serif;
+}
+
+.font-mono-label {
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.02em;
+}
+
+/* A thin steam/wave divider used between sections -- ties back to the tiffin motif */
+.steam-divider {
+  height: 14px;
+  width: 100%;
+  background-image: radial-gradient(circle at 10px 0, transparent 9px, #fbf3e6 10px);
+  background-size: 20px 14px;
+  background-repeat: repeat-x;
+}
+
+/* Focus visibility kept intentional, not removed */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid #a13a2a;
+  outline-offset: 2px;
+}
