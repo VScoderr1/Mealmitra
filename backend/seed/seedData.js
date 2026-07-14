@@ -1,5 +1,7 @@
 // Run with: npm run seed
 // Creates an admin account and a set of sample tiffin plans.
+const dns = require("node:dns");
+dns.setServers(["1.1.1.1", "1.0.0.1"]);
 const dotenv = require("dotenv");
 dotenv.config();
 const connectDB = require("../config/db");

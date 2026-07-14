@@ -4,8 +4,11 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
+const dns = require("node:dns");
 
 dotenv.config();
+
+dns.setServers(["1.1.1.1", "1.0.0.1"]);
 
 const connectDB = require("./config/db");
 const { notFound, errorHandler } = require("./middleware/errorHandler");
